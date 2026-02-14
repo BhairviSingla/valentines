@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unlock</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: #ff4d4d;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      font-size: 2rem;
+      padding: 10px;
+      background: black;
+      border: 2px solid red;
+      color: red;
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 30px;
+      background: darkred;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🔐 ENTER THE CODE</h1>
+<input id="code" maxlength="4" />
+<button onclick="unlock()">UNLOCK</button>
+
+<script>
+function unlock() {
+  const code = document.getElementById("code").value;
+  if (code === "1111") {
+    window.location.href = "final.html";
+  } else {
+    alert("❌ WRONG CODE");
+  }
+}
+</script>
+<script> for (let i = 0; i < 12; i++) { const heart = document.createElement("div"); heart.className = "floating-heart"; heart.style.left = Math.random() * 100 + "vw"; heart.style.animationDuration = (6 + Math.random() * 6) + "s"; document.body.appendChild(heart); } </script> <style> @keyframes floatUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-110vh); opacity: 0; } } </style>
+</body>
+</html>

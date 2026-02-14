@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #7b0f14;
+  color: #3a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- BEIGE PAPER BACKGROUND ---------- */
+.paper {
+  background: #f2eadf;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0,0,0,0.02), rgba(0,0,0,0.02));
+  background-size: 4px 4px, 100% 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: #f2eadf;
+  max-width: 680px;
+  width: 100%;
+  padding: 60px 40px;
+  position: relative;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.35);
+}
+
+/* ---------- BLOOD RED EDGE ---------- */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #7b0f14;
+  pointer-events: none;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #7b0f14;
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+/* ---------- TEXT ---------- */
+p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #3a0a0a;
+}
+
+/* ---------- SCRIPT FEEL ---------- */
+.script {
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  margin-top: 35px;
+  padding: 14px 40px;
+  border: none;
+  background: #7b0f14;
+  color: #f2eadf;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #9e1c1c;
+  transform: translateY(-2px);
+}
+
+/* ---------- POLAROID ---------- */
+.polaroid {
+  background: #fff;
+  padding: 14px 14px 38px;
+  width: 260px;
+  margin: 40px auto;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+.polaroid img {
+  width: 100%;
+  display: block;
+}
+
+/* ---------- SIDE NOTES ---------- */
+.note {
+  position: absolute;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.note.top-right {
+  top: 30px;
+  right: 40px;
+  text-align: right;
+}
+
+.note.bottom-left {
+  bottom: 30px;
+  left: 40px;
+}
+
+/* ---------- PUZZLE ---------- */
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 18px;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.puzzle-tile {
+  background: #7b0f14;
+  color: #f2eadf;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px #9e1c1c;
+}
+
+/* ---------- FINAL GIFT ---------- */
+.envelope-bg {
+  background: #7b0f14;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope {
+  background: #9e1c1c;
+  padding: 60px 45px;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #7b0f14;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+video {
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.floating-heart {
+  position: fixed;
+  bottom: -20px;
+  width: 18px;
+  height: 18px;
+  background: #7b0f14;
+  transform: rotate(45deg);
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
+
+.floating-heart::before,
+.floating-heart::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #7b0f14;
+  border-radius: 50%;
+}
+
+.floating-heart::before {
+  top: -9px;
+  left: 0;
+}
+
+.floating-heart::after {
+  left: -9px;
+  top: 0;
+}
+
+/* ---------- BLOOD RED HERO ---------- */
+.blood-hero {
+  background: #7b0f14;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* layered paper rectangles */
+.blood-hero::before,
+.blood-hero::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(0,0,0,0.08);
+  transform: rotate(-8deg);
+  top: -30%;
+  left: -10%;
+}
+
+.blood-hero::after {
+  transform: rotate(12deg);
+  background: rgba(255,255,255,0.03);
+}
+
+/* center content */
+.hero-center {
+  position: relative;
+  text-align: center;
+  color: #f2eadf;
+  z-index: 2;
+}
+
+.hero-center h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  margin-bottom: 30px;
+}
+/* ---------- CHECKPOINT PUZZLE ---------- */
+.checkpoint-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.checkpoint {
+  border: 1.5px solid #7b0f14;
+  padding: 25px 20px;
+}
+
+.checkpoint p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* choices */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.choices button {
+  font-size: 1.8rem;
+  background: #f2eadf;
+  color: #7b0f14;
+  border: 2px solid #7b0f14;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.choices button:hover {
+  transform: scale(1.1);
+}
+
+/* selected state */
+.selected {
+  background: #7b0f14 !important;
+  color: #f2eadf !important;
+}
+

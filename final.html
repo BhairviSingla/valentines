@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .envelope-bg {
+  background: #480d11;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope {
+  background: #f2eadf;
+  padding: 60px 45px;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #691318;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+video {
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.floating-heart {
+  position: fixed;
+  bottom: -20px;
+  width: 18px;
+  height: 18px;
+  background: #7b0f14;
+  transform: rotate(45deg);
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
+
+.floating-heart::before,
+.floating-heart::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #7b0f14;
+  border-radius: 50%;
+}
+
+.floating-heart::before {
+  top: -9px;
+  left: 0;
+}
+
+.floating-heart::after {
+  left: -9px;
+  top: 0;
+}
+#click {
+  margin-top: 40px;
+  padding: 18px 60px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  background: #651616;
+  color: #f2eadf;
+  border: none;
+  box-shadow: 0 0 25px rgb(109, 47, 47);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+  </style>
+</head>
+
+<body class="envelope-bg">
+
+  <div class="envelope">
+    <h1>Congratulations!!! 🥳🥳</h1>
+    <p>You’ve unlocked the gift ❤️</p>
+
+    <button id="click" onclick="window.location.href='video.html'">
+      Open Gift 🎁
+    </button>
+  </div>
+
+  <script>
+    for (let i = 0; i < 12; i++) {
+      const heart = document.createElement("div");
+      heart.className = "floating-heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (6 + Math.random() * 6) + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+<script> for (let i = 0; i < 12; i++) { const heart = document.createElement("div"); heart.className = "floating-heart"; heart.style.left = Math.random() * 100 + "vw"; heart.style.animationDuration = (6 + Math.random() * 6) + "s"; document.body.appendChild(heart); } </script> <style> @keyframes floatUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-110vh); opacity: 0; } } </style>
+</body>
+</html>

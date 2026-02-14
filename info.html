@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mission Briefing</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #5a0000, #1a1a1a);
+      color: #e5d5c0;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      max-width: 600px;
+      padding: 40px;
+      border: 2px solid #aa0000;
+      box-shadow: 0 0 30px rgba(170,0,0,0.6);
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: #8b0000;
+      color: #f5e6cf;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>⚠️ MISSION ⚠️</h1>
+  <p>
+    YOU THOUGHT ITS OVER??? 😈 <br> <br>
+    You are trapped.<br>
+    Time is running.<br><br>
+    Solve the jigsaw ⛓️⏳<br>
+    Scroll down, to press proceed, when done! <br><br>
+    The image will reveal a <b>CLUE..</b></br> Ofcourse not easily 😼<br><br><br>
+    <b>Find the <em> 4-DIGIT </em> code from the clue.</b></br>
+    Use the code to unlock the gift.
+  </p>
+
+  <button onclick="location.href='puzzle.html'">Start Mission</button>
+</div>
+<script> for (let i = 0; i < 12; i++) { const heart = document.createElement("div"); heart.className = "floating-heart"; heart.style.left = Math.random() * 100 + "vw"; heart.style.animationDuration = (6 + Math.random() * 6) + "s"; document.body.appendChild(heart); } </script> <style> @keyframes floatUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-110vh); opacity: 0; } } </style>
+</body>
+</html>
